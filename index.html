@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SentiSense</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <script defer src="face-api.min.js"></script>
+    <script defer src="app.js"></script>
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="pointer"></div>
+      <div class="form__container">
+        <div class="heading__secondary">SentiSense</div>
+        <form action="submit" class="form">
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email address"
+              id="email"
+              required
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
+          <div class="form__group">
+            <textarea
+              type="text"
+              class="form__input textarea"
+              placeholder="How is your relationship with the team?"
+              id="question1"
+              maxlength="250"
+              required
+              data-question="question1"
+            ></textarea>
+            <label for="question1" class="form__label"
+              >How is your relationship with the team?</label
+            >
+          </div>
+          <div class="form__group">
+            <textarea
+              type="text"
+              class="form__input textarea"
+              placeholder="How is your experience in this company?"
+              id="question2"
+              maxlength="250"
+              required
+              data-question="question2"
+            ></textarea>
+            <label for="question2" class="form__label"
+              >How is your experience in this company?</label
+            >
+          </div>
+          <div class="form__group button">
+            <button class="btn btn--green">Next step &rarr;</button>
+          </div>
+        </form>
+      </div>
+      <div class="display">
+        <video id="video" class="display__video" autoplay muted></video>
+      </div>
+    </section>
+    <section class="container2">
+      <div class="container2__message">
+        <svg class="check__icon" viewBox="0 0 100 100">
+          <use xlink:href="img/sprite.svg#icon-check"></use>
+        </svg>
+      </div>
+      <div class="container2__show__result">
+        <a href="#popup1" class="btn btn--white btn--animated">View Result</a>
+      </div>
+    </section>
+    <section class="popup" id="popup1">
+      <div class="popup__display_box">
+        <a href="#" class="popup__close">&times;</a>
+        <h2 class="heading__secondary">RESULT</h2>
+        <div class="popup__content"></div>
+      </div>
+    </section>
+  </body>
+</html>
